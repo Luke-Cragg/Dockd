@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "131665786419",
+    "project_id": "dockd-1afc1",
+    "storage_bucket": "dockd-1afc1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131665786419:android:d9e6f4552b786914ab1546",
+        "android_client_info": {
+          "package_name": "com.example.dockd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131665786419-erg167snop29hmudbici2tv2j06fta94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSUGYv6CAAqGjMNNSy-S2QyRBGBNO7PWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131665786419-erg167snop29hmudbici2tv2j06fta94.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
