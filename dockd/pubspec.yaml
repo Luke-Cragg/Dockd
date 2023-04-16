@@ -11,11 +11,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
+  cupertino_icons: 
   google_fonts:
-  google_maps_flutter: ^2.2.5
+  google_maps_flutter: 
   flutter_polyline_points:
   location:
+  firebase_database:
+  firebase_core:
+  intl:
 
 dev_dependencies:
   flutter_test:
