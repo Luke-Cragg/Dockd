@@ -17,7 +17,9 @@ dependencies:
   flutter_polyline_points:
   location:
   firebase_database:
-  firebase_core:
+  firebase_auth:
+  firebase_core:  
+  cloud_firestore: ^4.5.2
   intl:
 
 dev_dependencies:
