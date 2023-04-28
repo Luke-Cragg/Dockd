@@ -1,6 +1,6 @@
 import 'package:dockd/Navigation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:developer';
@@ -18,6 +18,28 @@ class MainHome extends State<Home> {
   final Color BackGrey = const Color(0xFF232323);
   final Color BackBlack = Color.fromARGB(255, 0, 0, 0).withOpacity(1);
   final Color Carbon = Color.fromARGB(255, 58, 54, 54);
+  String Username = '';
+
+  Future<void> _getCurrentUserName() async {
+    final uid = FirebaseAuth.instance.currentUser!.uid;
+
+    FirebaseFirestore.instance
+        .collection("Users")
+        .doc(uid)
+        .get()
+        .then((snapshot) {
+      setState(() {
+        Username =
+            (snapshot.data() as Map<String, dynamic>)['DisplayName'].toString();
+      });
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _getCurrentUserName();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +70,7 @@ class MainHome extends State<Home> {
             padding: const EdgeInsets.fromLTRB(20, 100, 0, 0),
             children: [
               Text(
-                'Welcome',
+                'Welcome ${Username}',
                 style:
                     GoogleFonts.merriweather(fontSize: 35, color: Colors.white),
               )
